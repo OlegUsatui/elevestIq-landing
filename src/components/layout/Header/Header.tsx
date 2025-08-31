@@ -3,16 +3,16 @@
 import { useEffect, useState, useCallback } from 'react';
 import clsx from 'clsx';
 import Button from '@/components/Button/Button';
+import Icon from "@/components/Icon/Icon";
 
 const links = [
   { href: '#about', label: 'About Us' },
   { href: '#products', label: 'Products' },
   { href: '#pricing', label: 'Pricing' },
-  { href: '#elevestAi', label: 'ElevestAI' },
+  { href: '#elevestAi', label: 'Elevest AI' },
   { href: '#how', label: 'How it works' },
   { href: '#startFree', label: 'Start Free' },
 ];
-
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -68,15 +68,7 @@ export default function Header() {
           aria-expanded={open}
           onClick={() => setOpen(v => !v)}
         >
-          {open ? (
-            <svg className="header__icon" viewBox="0 0 24 24">
-              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          ) : (
-            <svg className="header__icon" viewBox="0 0 24 24">
-              <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          )}
+          <Icon name={open ? 'close' : 'menu'} size="lg" className="header__icon" />
         </button>
       </div>
 
