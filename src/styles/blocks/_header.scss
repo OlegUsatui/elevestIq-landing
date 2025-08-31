@@ -1,14 +1,112 @@
 @import '../media.scss';
 
-.header { padding-block: var(--space-4); }
-.header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
-.header__logo { font-weight: 800; font-size: 1.25rem; color: var(--dark-blue); }
-.header__nav { display: none; }
-.header__actions { display: none; }
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  transition: box-shadow 160ms ease;
+  padding-block: var(--space-4);
+}
+
+.header--scrolled {
+  box-shadow: 0 4px 18px rgba(11, 61, 145, 0.08);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.header__logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--dark-blue);
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__actions {
+  display: none;
+}
+
+.header__toggle {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+}
+
+.header__toggle:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.35);
+}
+
+.header__icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--dark-blue);
+}
+
+.header__panel {
+  position: fixed;
+  inset: 0;
+  background: var(--white);
+  display: none;
+  padding: var(--space-8) var(--container-pad);
+}
+
+.header--open .header__panel {
+  display: block;
+}
+
+.header__panel-inner {
+  display: grid;
+  gap: var(--space-6);
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.header__link {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
 
 @include tablet {
-  .header__nav { display: block; }
-  .header__menu { display: flex; gap: var(--space-4); list-style: none; padding: 0; margin: 0; }
-  .header__link { font-size: var(--fs-md); }
-  .header__actions { display: block; }
+  .header {
+    padding-block: var(--space-5);
+  }
+  .header__toggle {
+    display: none;
+  }
+  .header__nav {
+    display: block;
+  }
+  .header__menu {
+    display: flex;
+    gap: var(--space-6);
+  }
+  .header__link {
+    font-size: var(--fs-md);
+  }
+  .header__actions {
+    display: block;
+  }
 }
