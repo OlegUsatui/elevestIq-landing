@@ -1,0 +1,17 @@
+@import '../media.scss';
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--blue);
+
+  span {
+    color: var(--dark-blue);
+  }
+}
+
+@include tablet {
+  .logo {
+    font-size: 24px;
+  }
+}

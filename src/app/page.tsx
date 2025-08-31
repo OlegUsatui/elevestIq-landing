@@ -1,9 +1,12 @@
 import Button from '@/components/Button/Button';
 import Input from '@/components/Input/Input';
+import Header from "@/components/layout/Header/Header";
 
 export default function HomePage() {
   return (
-    <main className="container" style={{ paddingBlock: '32px' }}>
+
+    <main className="container">
+      <Header/>
       <h1 style={{ fontSize: 'var(--fs-xl)', fontWeight: 800, margin: 0 }}>Elevestiq</h1>
       <p style={{ marginTop: '12px', fontSize: 'var(--fs-lg)', maxWidth: 560 }}>
         Explore how it works or start free. Components follow BEM and mobile-first.

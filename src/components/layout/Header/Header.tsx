@@ -1,17 +1,17 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import {useEffect, useState, useCallback} from 'react';
 import clsx from 'clsx';
 import Button from '@/components/Button/Button';
 import Icon from "@/components/Icon/Icon";
+import Logo from "@/components/Logo/Logo";
 
 const links = [
-  { href: '#about', label: 'About Us' },
-  { href: '#products', label: 'Products' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#elevestAi', label: 'Elevest AI' },
-  { href: '#how', label: 'How it works' },
-  { href: '#startFree', label: 'Start Free' },
+  {href: '#about', label: 'About Us'},
+  {href: '#products', label: 'Products'},
+  {href: '#pricing', label: 'Pricing'},
+  {href: '#elevestAi', label: 'Elevest AI'},
+  {href: '#how', label: 'How it works'},
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function Header() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 0);
     onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, {passive: true});
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -42,10 +42,10 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={clsx('header', { 'header--open': open, 'header--scrolled': scrolled })}>
-      <div className="container header__inner">
-        <a href="/" className="header__logo">Elevestiq</a>
+    <header className={clsx('header', {'header--open': open, 'header--scrolled': scrolled})}>
+      <Logo/>
 
+      <div className="header__inner">
         <nav className="header__nav" aria-label="Primary">
           <ul className="header__menu">
             {links.map(l => (
@@ -68,7 +68,7 @@ export default function Header() {
           aria-expanded={open}
           onClick={() => setOpen(v => !v)}
         >
-          <Icon name={open ? 'close' : 'menu'} size="lg" className="header__icon" />
+          <Icon name={open ? 'close' : 'menu'} size="lg" className="header__icon"/>
         </button>
       </div>
 
