@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+echo "🔎 pre-commit: lint-staged"
+npx --no --lint-staged
