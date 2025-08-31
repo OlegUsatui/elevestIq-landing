@@ -1,28 +1,22 @@
-.field {
-  display: block;
-}
+.field { display: block; }
 
 .field__control {
-  background: var(--gradient-primary);
+  background: var(--background);
   padding: 2px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
 }
 
 .field__input {
   width: 100%;
   border: 0;
   outline: 0;
-  border-radius: calc(var(--radius-lg) - 2px);
-  background: var(--color-white);
-  color: var(--color-text);
+  border-radius: calc(var(--radius-md) - 2px);
+  background: var(--white);
+  color: var(--dark-blue);
   padding: 12px 14px;
   font-size: var(--fs-md);
 }
 
-.field__input::placeholder {
-  color: rgba(15, 23, 42, 0.55);
-}
+.field__input::placeholder { color: rgba(11, 61, 145, 0.55); }
 
-.field__input:focus {
-  box-shadow: 0 0 0 3px rgba(47, 128, 255, 0.25) inset;
-}
+.field__input:focus { box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.25) inset; }

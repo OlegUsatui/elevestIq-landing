@@ -1,0 +1,14 @@
+@import '../media.scss';
+
+.hero { padding-block: var(--section-py); }
+.hero__inner { display: grid; gap: var(--space-6); }
+.hero__title { font-size: 2rem; font-weight: 800; line-height: 1.1; color: var(--dark-blue); }
+.hero__text { font-size: var(--fs-lg); opacity: 0.9; max-width: 56ch; }
+.hero__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+@include tablet {
+  .hero__title { font-size: 2.5rem; }
+}
+@include desktop {
+  .hero__title { font-size: 3rem; }
+}

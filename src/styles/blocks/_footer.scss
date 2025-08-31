@@ -1,0 +1,9 @@
+@import '../media.scss';
+
+.footer { padding-block: var(--space-8); }
+.footer__inner { display: grid; gap: var(--space-4); }
+.footer__copy { opacity: 0.8; font-size: var(--fs-sm); }
+
+@include tablet {
+  .footer__inner { grid-template-columns: 1fr auto; align-items: center; }
+}
