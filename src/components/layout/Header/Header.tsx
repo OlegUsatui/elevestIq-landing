@@ -74,9 +74,6 @@ export default function Header() {
 
       <div id="mobile-menu" className="header__panel" role="dialog" aria-modal="true">
         <div className="header__panel-inner container">
-          <div className="header__panel-header">
-            <a href="/" className="header__logo" onClick={closeMenu}>Elevestiq</a>
-          </div>
           <nav aria-label="Mobile">
             <ul className="header__menu">
               {links.map(l => (

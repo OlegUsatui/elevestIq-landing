@@ -50,7 +50,24 @@
   width: 24px;
   height: 24px;
   fill: var(--dark-blue);
+  z-index: 2;
+  cursor: pointer;
 }
+
+#mobile-menu {
+  &.header__panel {
+    right: 0;
+    left: 50%;
+    background: var(--dark-blue);
+    height: 100vh;
+    width: 50%;
+
+    .header__link {
+      color: var(--white);
+    }
+  }
+}
+
 
 .header__panel {
   position: fixed;
@@ -86,6 +103,9 @@
 }
 
 @include tablet {
+  #mobile-menu.header__panel {
+    left: 100%;
+  }
   .header {
     padding-block: var(--space-5);
   }
