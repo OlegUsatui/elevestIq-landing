@@ -1,8 +1,0 @@
-@import '../media.scss';
-
-.cta { padding-block: var(--section-py); }
-.cta__grid { display: grid; gap: var(--space-4); }
-
-@include tablet {
-  .cta__grid { grid-template-columns: 1fr auto; align-items: center; }
-}
