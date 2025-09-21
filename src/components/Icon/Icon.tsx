@@ -5,10 +5,10 @@ type Props = {
   ariaLabel?: string;
 };
 
-export default function Icon({ name, size = 'md', className, ariaLabel }: Props) {
+export default function Icon({ name, className, ariaLabel }: Props) {
   const a11y = ariaLabel ? { role: 'img', 'aria-label': ariaLabel } : { 'aria-hidden': true };
   return (
-    <svg className={['icon', `icon--${size}`, className || ''].join(' ').trim()} {...a11y}>
+    <svg width={32} height={32} className={['icon', className || ''].join(' ').trim()} {...a11y}>
       <use href={`/icons/sprite.svg#${name}`} />
     </svg>
   );

@@ -9,50 +9,101 @@
   background: var(--white);
   transition: box-shadow 160ms ease;
   padding-block: var(--space-4);
+
+
+  &--scrolled {
+    box-shadow: 0 4px 18px rgba(11, 61, 145, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__actions {
+    display: none;
+  }
+
+  &__toggle {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    z-index: 1;
+
+    &:focus-visible {
+      outline: 2px solid transparent;
+      box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.35);
+    }
+
+
+  }
+
+  &__action-icon {
+    &--close {
+      width: 32px;
+      height: 32px;
+    }
+
+    &--menu {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--dark-blue);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__panel {
+    position: fixed;
+    inset: 0;
+    background: var(--white);
+    display: none;
+    padding: var(--space-8) var(--container-pad);
+  }
+
+  &--open .header__panel {
+    display: block;
+  }
+
+  &__panel-inner {
+    display: grid;
+    gap: var(--space-6);
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  &__link {
+    font-weight: 600;
+    color: var(--dark-blue);
+  }
+
+
 }
 
-.header--scrolled {
-  box-shadow: 0 4px 18px rgba(11, 61, 145, 0.08);
-}
-
-.header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-}
-
-.header__nav {
-  display: none;
-}
-
-.header__actions {
-  display: none;
-}
-
-.header__toggle {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  display: grid;
-  place-items: center;
-}
-
-.header__toggle:focus-visible {
-  outline: 2px solid transparent;
-  box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.35);
-}
-
-.header__icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--dark-blue);
-  z-index: 2;
-  cursor: pointer;
-}
 
 #mobile-menu {
   &.header__panel {
@@ -66,63 +117,73 @@
       color: var(--white);
     }
   }
-}
 
-
-.header__panel {
-  position: fixed;
-  inset: 0;
-  background: var(--white);
-  display: none;
-  padding: var(--space-8) var(--container-pad);
-}
-
-.header--open .header__panel {
-  display: block;
-}
-
-.header__panel-inner {
-  display: grid;
-  gap: var(--space-6);
-  height: 100%;
-  grid-template-rows: auto 1fr auto;
-}
-
-.header__menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: var(--space-4);
-}
-
-.header__link {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--dark-blue);
 }
 
 @include tablet {
+  .header__action-icon {
+    &--menu {
+      width: 40px;
+      height: 28px;
+    }
+
+    &--close {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  #mobile-menu {
+
+  }
+}
+
+@include desktop {
   #mobile-menu.header__panel {
     left: 100%;
   }
+
   .header {
-    padding-block: var(--space-5);
+    &__toggle {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
+
+    &__menu {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    &__link {
+      font-size: 20px;
+      color: var(--dark-blue);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    &__actions {
+      display: block;
+
+      &-button {
+        border: none;
+        border-radius: 12px;
+        display: flex;
+        padding: 16px 64px;
+        justify-content: center;
+        align-items: center;
+        background: var(--background);
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 18px;
+      }
+    }
+
+
   }
-  .header__toggle {
-    display: none;
-  }
-  .header__nav {
-    display: block;
-  }
-  .header__menu {
-    display: flex;
-    gap: var(--space-6);
-  }
-  .header__link {
-    font-size: var(--fs-md);
-  }
-  .header__actions {
-    display: block;
-  }
+
 }
