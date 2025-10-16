@@ -1,17 +1,18 @@
 'use client';
 
-import {useEffect, useState, useCallback} from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import clsx from 'clsx';
 import Button from '@/components/Button/Button';
-import Icon from "@/components/Icon/Icon";
-import Logo from "@/components/Logo/Logo";
+import Icon from '@/components/Icon/Icon';
+import Logo from '@/components/Logo/Logo';
+import Socials from '@/components/Socials/Socials';
 
 const links = [
-  {href: '#about', label: 'About Us'},
-  {href: '#products', label: 'Products'},
-  {href: '#pricing', label: 'Pricing'},
-  {href: '#elevestAi', label: 'Elevest AI'},
-  {href: '#how', label: 'How it works'},
+  { href: '#about', label: 'About Us' },
+  { href: '#products', label: 'Products' },
+  { href: '#pricing', label: 'Pricing' },
+  { href: '#elevestAi', label: 'Elevest AI' },
+  { href: '#how', label: 'How it works' },
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -101,35 +102,7 @@ export default function Header() {
             </ul>
           </nav>
           <div className="header__socials">
-            <ul className="socials-menu">
-              <li className="menu-item">
-                <a
-                  className="menu-link"
-                  href="https://www.facebook.com/goITclub/"
-                  target="_blank"
-                >
-                  <Icon name="facebook" />
-                </a>
-              </li>
-              <li className="menu-item">
-                <a
-                  className="menu-link"
-                  href="https://www.instagram.com/goitclub/"
-                  target="_blank"
-                >
-                  <Icon name="instagram" />
-                </a>
-              </li>
-              <li className="menu-item">
-                <a
-                  className="menu-link"
-                  href="https://www.youtube.com/c/GoIT"
-                  target="_blank"
-                >
-                  <Icon name="youtube" />
-                </a>
-              </li>
-            </ul>
+            <Socials></Socials>
           </div>
         </div>
       </div>

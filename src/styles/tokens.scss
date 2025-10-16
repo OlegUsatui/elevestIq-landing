@@ -26,13 +26,13 @@
   --fs-xl: 1.5rem;
 
   --container-max: 1200px;
-  --container-pad: 16px;
+  --container-pad: 20px;
   --section-py: 48px;
 }
 
 @media (min-width: 768px) {
   :root {
-    --container-pad: 24px;
+    --container-pad: 32px;
     --section-py: 80px;
     --fs-xl: 1.75rem;
   }

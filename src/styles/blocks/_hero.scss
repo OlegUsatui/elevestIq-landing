@@ -5,6 +5,10 @@
   background: var(--background);
   border-radius: 16px;
   height: 687px;
+  background-image: url('/images/hero-mob.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   &__title {
     color: #FFF;
@@ -58,6 +62,8 @@
 @include tablet {
   .hero {
     padding: 84px 40px 0;
+    background-image: url('/images/hero-tab.png');
+
 
     &__title {
       font-size: 54px;
@@ -67,6 +73,9 @@
       display: block;
       font-size: 24px;
     }
+    &__actions {
+      align-items: flex-start;
+    }
   }
 
 }
@@ -74,11 +83,18 @@
 @include desktop {
   .hero {
     padding: 92px 58px 0;
+    background-image: url('/images/hero-desk.png');
+    background-size: contain;
     &__title {
       font-size: 60px;
+      max-width: 673px;
     }
     &__subtitle {
       font-size: 24px;
+      max-width: 468px;
+    }
+    &__actions {
+      flex-direction: row;
     }
   }
 
