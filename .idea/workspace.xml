@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f79c9-fbfa-4561-bb38-b5f30cb74f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/hero-desk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/hero-mob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/hero-tab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Socials/Socials.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/blocks/_socials.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SectionTitle/SectionTitle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/AboutUs/AboutUs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/icons/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/icons/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/blocks/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blocks/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/blocks/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blocks/_hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/blocks/_about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blocks/_about.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/_section-title.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/_section-title.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/tokens.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/tokens.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +57,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/ousat/WebstormProjects/elevestIq-landing/public/images",
+    "last_opened_file_path": "/Users/ousat/WebstormProjects/elevestIq-landing/src/components/layout/AboutUs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/layout/AboutUs" />
       <recent name="$PROJECT_DIR$/public/images" />
     </key>
   </component>
@@ -111,7 +108,8 @@
       <workItem from="1756638156648" duration="9377000" />
       <workItem from="1758294920195" duration="61000" />
       <workItem from="1758294991521" duration="13535000" />
-      <workItem from="1760525510934" duration="2452000" />
+      <workItem from="1760525510934" duration="5470000" />
+      <workItem from="1762594198438" duration="5510000" />
     </task>
     <servers />
   </component>
