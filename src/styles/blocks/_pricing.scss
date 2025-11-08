@@ -1,1 +1,144 @@
-.pricing { padding-block: var(--section-py); }
+.pricing {
+  padding-block: var(--section-py);
+  text-align: center;
+  color: var(--white);
+
+  &__subtitle {
+    margin: 8px auto 20px;
+    max-width: 680px;
+    opacity: 0.85;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+  }
+
+  &__card {
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--dark-blue);
+    border: 1px solid rgba(0, 63, 204, 0.25);
+    box-shadow: 0 10px 24px rgba(5, 20, 70, 0.12);
+    overflow: hidden;
+  }
+
+  &__head {
+    background: var(--dark-blue, #0B3D91);
+    padding: 30px 0;
+  }
+
+  &__head.pro {
+    background: linear-gradient(180deg, #0B3D91 0%, #1575D3 100%);
+    padding: 30px 0;
+  }
+
+  &__title {
+    color: #FFF;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 60% */
+    letter-spacing: -0.8px;
+    margin: 0;
+  }
+
+  /* body */
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px 35px;
+  }
+
+  &__price {
+    color: var(--dark-blue);
+    text-align: center;
+    font-family: Mako;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__features {
+    padding: 0;
+    padding-left: 20px;
+    list-style: disc;
+    display: grid;
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+
+  &__feature {
+    color: var(--dark-blue, #0B3D91);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  &__note {
+    color: var(--dark-blue, #0B3D91);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding-left: 30px;
+    display: block;
+
+    &-label {
+      color: var(--dark-blue, #0B3D91);
+      font-family: Manrope;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      display: block;
+    }
+  }
+
+  &__cta {
+    inline-size: 100%;
+  }
+}
+
+///* breakpoints */
+//@media (min-width: 768px) {
+//  .pricing {
+//    padding: 56px 20px;
+//
+//    &__cards {
+//      grid-template-columns: repeat(2, 1fr);
+//      gap: 20px;
+//    }
+//  }
+//}
+//
+//@media (min-width: 1200px) {
+//  .pricing {
+//    padding: 72px 0;
+//
+//    &__cards {
+//      grid-template-columns: repeat(3, 1fr);
+//      gap: 24px;
+//    }
+//
+//    &__title { font-size: 20px; }
+//    &__amount { font-size: 36px; }
+//  }
+//}
+
