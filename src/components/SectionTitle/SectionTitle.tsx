@@ -1,10 +1,10 @@
 import { JSX } from 'react';
 
-export default function SectionTitle({ title = '' }: { title: string }): JSX.Element {
+export default function SectionTitle({ text = '' }: { text: string }): JSX.Element {
 
   return (
     <h2 className='section-title'>
-      {title}
+      {text}
     </h2>
   );
 }

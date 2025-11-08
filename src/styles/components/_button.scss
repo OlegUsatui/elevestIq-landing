@@ -1,16 +1,48 @@
+/* ===== Button (unified) ===== */
 .btn {
+  /* design tokens (можна перевизначати модифікаторами/контекстом) */
+  --btn-bg: var(--background);
+  --btn-color: var(--white);
+  --btn-border: transparent;
+  --btn-py: 12px;
+  --btn-px: 18px;
+  --btn-fs: var(--fs-md);
+  --btn-radius: var(--radius-md);
+
+  /* фіксовані пресети з існуючого коду */
+  --btn-w: 238px;   /* залишено для сумісності */
+  --btn-h: 56px;    /* залишено для сумісності */
+  --btn-lh: 28px;   /* залишено для сумісності */
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
-  border-radius: var(--radius-md);
+
+  width: var(--btn-w);
+  height: var(--btn-h);
+  padding: var(--btn-py) var(--btn-px);
+
+  font-size: var(--btn-fs);
   font-weight: 700;
-  line-height: 1;
+  line-height: var(--btn-lh);
+  border-radius: var(--btn-radius);
+
+  border: 1px solid var(--btn-border);
+  color: var(--btn-color);
+  background: var(--btn-bg);
+
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
-  padding: 12px 18px;
-  font-size: var(--fs-md);
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+          transform 120ms ease,
+          box-shadow 120ms ease,
+          filter 120ms ease,
+          background-color 120ms ease,
+          color 120ms ease;
 }
 
 .btn:focus-visible {
@@ -18,20 +50,61 @@
   box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.35);
 }
 
-.btn:active { transform: translateY(1px); }
+.btn:not(:disabled):active { transform: translateY(1px); }
+.btn:not(:disabled):hover  { filter: brightness(0.98); }
 
-.btn--primary {
-  color: var(--white);
-  background: var(--background);
+.btn:disabled,
+.btn.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  filter: none;
 }
 
-.btn--primary:hover { filter: brightness(0.98); }
+/* ===== Variants ===== */
+.btn--primary {
+  /* Залишено як у твоєму другому блоці (біла кнопка) */
+  --btn-bg: var(--white);
+  --btn-color: var(--dark-blue);
+  --btn-border: none;
+}
+
+.btn--secondary {
+  --btn-bg: var(--blue);
+  --btn-color: var(--white);
+  --btn-border: transparent;
+}
+
+.btn--accent {
+  --btn-bg: var(--dark-blue);
+  --btn-color: var(--white);
+  --btn-border: transparent;
+}
 
 .btn--outline {
-  background: var(--white);
-  color: var(--dark-blue);
-  border-color: var(--blue);
+  --btn-bg: var(--white);
+  --btn-color: var(--dark-blue);
+  --btn-border: var(--blue);
 }
 
-.btn--md { padding: 12px 18px; font-size: var(--fs-md); }
-.btn--lg { padding: 16px 24px; font-size: var(--fs-lg); }
+/* ===== Sizes ===== */
+.btn--md { --btn-py: 12px; --btn-px: 18px; --btn-fs: var(--fs-md); }
+.btn--lg { --btn-py: 16px; --btn-px: 24px; --btn-fs: var(--fs-lg); }
+
+/* ===== Utilities ===== */
+.btn--block { inline-size: 100%; }
+
+/* Квадратна іконка без фіксованих 238×56 */
+.btn--icon {
+  --btn-w: auto;
+  --btn-h: auto;
+  --btn-lh: 1;
+  --btn-px: 12px;
+  aspect-ratio: 1 / 1;
+  gap: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}

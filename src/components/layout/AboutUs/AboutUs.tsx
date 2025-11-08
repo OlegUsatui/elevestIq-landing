@@ -20,7 +20,7 @@ export default function AboutUs({}: Props) {
   ]
   return (
     <section className="about-us">
-      <SectionTitle title="About Us" />
+      <SectionTitle text="About Us" />
       <ul className="about-us__cards">
         {cards.map((card) => (
           <li key={card.id} className="about-us__card">

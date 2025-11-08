@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import clsx from 'clsx';
 
 type CommonProps = {
-  variant?: 'primary' | 'outline';
+  variant?: 'primary' | 'outline' | 'accent';
   size?: 'md' | 'lg';
   className?: string;
   children: React.ReactNode;
