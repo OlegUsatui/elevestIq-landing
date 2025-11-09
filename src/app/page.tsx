@@ -5,6 +5,7 @@ import Products from '@/components/layout/Products/Products';
 import Pricing from '@/components/layout/Pricing/Pricing';
 import ElevestAI from '@/components/layout/ElevestAI/ElevestAI';
 import HowItWorks from '@/components/layout/HowItWorks/HowItWorks';
+import GetStarted from '@/components/layout/GetStarted/GetStarted';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Pricing />
       <ElevestAI />
       <HowItWorks />
+      <GetStarted />
     </main>
   );
 }
