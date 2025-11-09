@@ -26,8 +26,8 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run build && npm run export
-      - run: touch out/.nojekyll   # щоб _next/ не зрізався Jekyll'ом
+      - run: npm run build
+      - run: touch out/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
         with:
