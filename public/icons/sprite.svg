@@ -84,7 +84,7 @@
               d="M57.3119 62.5C59.5619 62.0312 61.6869 61.125 63.4369 59.7812C68.3119 56.125 68.3119 50.0937 63.4369 46.4375C61.7181 45.125 59.6244 44.25 57.4056 43.75"
               stroke="#1381ED" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 195" id="product">
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 195" id="product-logo">
         <path fill-rule="evenodd" clip-rule="evenodd"
               d="M160.653 132.559L168.732 118.705H207.267L219.167 97.8681L195.368 56.3056H161.854L150.282 35.6906H137.292V21.7256H158.47L170.042 42.4514H187.399L163.492 0.888916H116.877V56.3056H135.763L143.732 70.1597H116.877V97.8681H141.549L153.012 77.1423H183.687L191.547 90.9964H160.981L149.518 111.722H116.877V160.267H153.994L146.134 174.121H116.877V194.847H163.492L199.298 132.559H176.482L168.513 146.413H137.292V132.559H160.653Z"
               fill="#1381ED"></path>
@@ -201,4 +201,10 @@
                   fill="white"></path>
         </g>
     </symbol>
+
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="check">
+        <path d="M16.6668 5L7.50016 14.1667L3.3335 10" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+    </symbol>
+
 </svg>

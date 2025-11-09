@@ -3,6 +3,7 @@ import HeroPromo from '@/components/layout/HeroPromo/HeroPromo';
 import AboutUs from '@/components/layout/AboutUs/AboutUs';
 import Products from '@/components/layout/Products/Products';
 import Pricing from '@/components/layout/Pricing/Pricing';
+import ElevestAI from '@/components/layout/ElevestAI/ElevestAI';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <AboutUs />
       <Products />
       <Pricing />
+      <ElevestAI />
     </main>
   );
 }
