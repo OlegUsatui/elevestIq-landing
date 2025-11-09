@@ -27,6 +27,14 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - name: Check export output
+        run: |
+          ls -la
+          if [ ! -d out ]; then
+            echo "❌ Build не створив out/. Перевір output:'export' і що додаток повністю статичний (без SSR/API)."
+            exit 1
+          fi
+
       - run: touch out/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
