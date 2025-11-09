@@ -1,7 +1,5 @@
 'use client';
 
-import SectionTitle from '@/components/SectionTitle/SectionTitle';
-
 type Step = {
   id: number;
   icon: string;

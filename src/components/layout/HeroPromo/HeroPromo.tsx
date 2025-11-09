@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 
 type Props = {
   title?: string;
@@ -34,7 +35,7 @@ export default function HeroPromo({
         </div>
 
         <div className="hero__visual" aria-hidden="true">
-          <img src={imageSrc} alt="" />
+          <Image src={imageSrc} alt="hero-agreement"/>
         </div>
       </div>
     </section>

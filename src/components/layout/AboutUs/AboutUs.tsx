@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import SectionTitle from '@/components/SectionTitle/SectionTitle';
-import clsx from 'clsx';
 
 type Props = {
   title?: string;

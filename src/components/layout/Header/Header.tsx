@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import clsx from 'clsx';
-import Button from '@/components/Button/Button';
 import Icon from '@/components/Icon/Icon';
 import Logo from '@/components/Logo/Logo';
 import Socials from '@/components/Socials/Socials';

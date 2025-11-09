@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f79c9-fbfa-4561-bb38-b5f30cb74f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/GetStarted/GetStarted.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/blocks/_get-started.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/AboutUs/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/AboutUs/AboutUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/HeroPromo/HeroPromo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/HeroPromo/HeroPromo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/HowItWorks/HowItWorks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/HowItWorks/HowItWorks.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +117,7 @@
       <workItem from="1758294920195" duration="61000" />
       <workItem from="1758294991521" duration="13535000" />
       <workItem from="1760525510934" duration="5470000" />
-      <workItem from="1762594198438" duration="22894000" />
+      <workItem from="1762594198438" duration="26263000" />
     </task>
     <servers />
   </component>

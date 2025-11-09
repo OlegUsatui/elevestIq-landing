@@ -13,7 +13,7 @@ type ButtonProps =
   | ({ as: 'a' } & AnchorHTMLAttributes<HTMLAnchorElement> & CommonProps);
 
 export default function Button(props: ButtonProps) {
-  const { as = 'button', variant = 'primary', size = 'md', className, children, ...rest } = props as any;
+  const { as = 'button', variant = 'primary', size = 'md', className, children, ...rest } = props;
   const classes = clsx('btn', `btn--${variant}`, `btn--${size}`, className);
 
   if (as === 'a') {
