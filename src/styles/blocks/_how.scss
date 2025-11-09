@@ -1,1 +1,110 @@
-.how { padding-block: var(--section-py); }
+.how {
+  --how-radius: 24px;
+  --how-bg: linear-gradient(180deg, #0B3D91 0%, #1575D3 100%);
+  --how-blue: #2b63e6;
+  --how-dark: #0b3d91;
+
+  padding: 30px;
+
+  &__wrap {
+    background: var(--how-bg);
+    color: #fff;
+    border-radius: var(--how-radius);
+    padding: 20px 14px 22px;
+    box-shadow: 0 24px 50px rgba(8, 22, 66, 0.35) inset;
+  }
+
+  &__title {
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: Manrope, serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    margin: 0 0 10px;
+  }
+
+  &__subtitle {
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: -0.32px;
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &-icon {
+      width: 105px;
+      height: 100px;
+      border-radius: 12px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 16px rgba(8, 24, 66, 0.2);
+      color: var(--how-blue);
+
+      svg {
+        width: 75px;
+        height: 75px;
+      }
+    }
+
+    &-title {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    &-text {
+      color: #e8efff;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    align-content: center;
+    max-width: 151px;
+
+    //&:nth-child(odd)::after {
+    //  content: '';
+    //  position: absolute;
+    //  top: 20%;
+    //  left: calc(100% + 4px);
+    //  width: clamp(24px, 8vw, 56px);
+    //  height: 2px;
+    //  background: rgba(255, 255, 255, .45);
+    //  border-radius: 2px;
+    //}
+    //
+    //&--full:nth-child(odd)::after,
+    //&:last-child::after {
+    //  display: none;
+    //}
+  }
+
+  &__step--full {
+
+  }
+}
+
