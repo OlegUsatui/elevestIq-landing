@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 
 type Props = {
   title?: string;
   subtitle?: string;
-  imageSrc?: string;
   onStart?: () => void;
   onExplore?: () => void;
 };
@@ -13,7 +11,6 @@ type Props = {
 export default function HeroPromo({
   title = 'Where Smart Startups Meet Trusted Investors',
   subtitle = 'AI-powered matching, legal support, and secure signing — all in one platform.',
-  imageSrc = '/hero-agreement.jpg',
   onStart,
   onExplore,
 }: Props) {
@@ -32,10 +29,6 @@ export default function HeroPromo({
               Explore How It Works
             </button>
           </div>
-        </div>
-
-        <div className="hero__visual" aria-hidden="true">
-          <Image src={imageSrc} alt="hero-agreement"/>
         </div>
       </div>
     </section>

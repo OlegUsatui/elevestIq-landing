@@ -1,9 +1,138 @@
-@import '../media.scss';
+.footer {
+  --footer-bg-1: #153a97;
+  --footer-bg-2: #1f4aa8;
+  --footer-accent: #8bb4ff;
+  --footer-radius: 16px;
 
-.footer { padding-block: var(--space-8); }
-.footer__inner { display: grid; gap: var(--space-4); }
-.footer__copy { opacity: 0.8; font-size: var(--fs-sm); }
+  padding: 20px 12px;
+  color: #e6eeff;
+  background: linear-gradient(180deg, var(--footer-bg-2) 0%, #0d2869 100%);
 
-@include tablet {
-  .footer__inner { grid-template-columns: 1fr auto; align-items: center; }
+  &__container {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  &__brand {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__info {
+    margin: 0;
+    display: grid;
+    gap: 6px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__dt {
+    opacity: .85;
+  }
+
+  &__dd {
+    color: #fff;
+    margin: 0;
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 6px 0 0;
+    list-style: none;
+  }
+
+  &__social-link {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
+    color: #fff;
+    transition: transform .15s ease, background-color .15s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, .14);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  /* Nav */
+  &__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+
+  &__nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: .95;
+
+    &:hover {
+      color: var(--footer-accent);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 6px 6px;
+    color: rgba(255, 255, 255, .86);
+    font-size: 13px;
+  }
+
+  &__copy {
+    text-align: center;
+  }
+
+  &__legal {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__sep {
+    opacity: .5;
+  }
+
+  &__legal-link {
+    color: #e6eeff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
 }
+
