@@ -5,8 +5,11 @@
   font-size: 20px;
   color: var(--blue);
 
-  span {
+  span.dark {
     color: var(--dark-blue);
+  }
+  span.light {
+    color: white;
   }
 }
 

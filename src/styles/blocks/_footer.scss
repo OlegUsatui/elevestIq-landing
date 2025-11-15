@@ -4,20 +4,27 @@
   --footer-accent: #8bb4ff;
   --footer-radius: 16px;
 
-  padding: 20px 12px;
+  padding: 35px 32px 20px;
   color: #e6eeff;
   background: linear-gradient(180deg, var(--footer-bg-2) 0%, #0d2869 100%);
 
   &__container {
-    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-inline: auto;
+    width: 100%;
+    gap: 29px;
   }
 
   &__top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    border-radius: 12px;
-    padding: 18px;
+  }
+
+  &__logo {
+    width: 100%;
   }
 
   &__brand {
@@ -34,15 +41,30 @@
   &__row {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
+  }
+
+  &__dt,
+  &__dd,
+  &__nav-link,
+  &__bottom,
+  &__copy,
+  &__legal-link {
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    font-weight: 400;
   }
 
   &__dt {
-    opacity: .85;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   &__dd {
     color: #fff;
+    font-weight: 600;
     margin: 0;
   }
 
@@ -60,10 +82,10 @@
     width: 36px;
     height: 36px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, .08);
-    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: #fff;
-    transition: transform .15s ease, background-color .15s ease;
+    transition: transform 0.15s ease, background-color 0.15s ease;
 
     svg {
       width: 18px;
@@ -71,7 +93,7 @@
     }
 
     &:hover {
-      background: rgba(255, 255, 255, .14);
+      background: rgba(255, 255, 255, 0.14);
       transform: translateY(-1px);
     }
 
@@ -86,53 +108,40 @@
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 10px;
+    gap: 20px;
   }
 
   &__nav-link {
     color: #fff;
-    text-decoration: none;
     font-weight: 600;
-    opacity: .95;
-
-    &:hover {
-      color: var(--footer-accent);
-    }
   }
 
   &__bottom {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 6px 6px;
-    color: rgba(255, 255, 255, .86);
-    font-size: 13px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0.9;
   }
 
   &__copy {
-    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0.9;
   }
 
   &__legal {
     display: flex;
-    gap: 10px;
     align-items: center;
-  }
-
-  &__sep {
-    opacity: .5;
+    justify-content: space-between;
+    width: 100%;
   }
 
   &__legal-link {
-    color: #e6eeff;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
+    opacity: 0.9;
   }
 }
-

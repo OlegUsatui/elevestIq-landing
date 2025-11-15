@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Logo from '@/components/Logo/Logo';
+import Socials from '@/components/Socials/Socials';
 
 type NavItem = { href: string; label: string };
 type SocialItem = { href: string; icon: string; label: string };
@@ -34,9 +35,10 @@ export default function Footer({
   return (
     <footer className="footer">
       <div className="footer__container">
-        <Logo />
+        <div className="footer__logo">
+          <Logo theme={'light'} />
+        </div>
         <div className="footer__top">
-
           <div className="footer__brand">
             <dl className="footer__info">
               <div className="footer__row">
@@ -49,23 +51,7 @@ export default function Footer({
               </div>
             </dl>
 
-            <ul className="footer__social">
-              {socials.map((s) => (
-                <li key={s.icon}>
-                  <a
-                    className="footer__social-link"
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label={s.label}
-                  >
-                    <svg width={18} height={18} aria-hidden="true">
-                      <use href={`/icons/sprite.svg#${s.icon}`} />
-                    </svg>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <Socials></Socials>
           </div>
 
           <nav className="footer__nav" aria-label="Footer">
@@ -86,13 +72,11 @@ export default function Footer({
             ©{year} ElevestIQ. All rights reserved.
           </div>
           <div className="footer__legal">
-            <Link href="/privacy" className="footer__legal-link">
+            <Link href="#" className="footer__legal-link">
               Privacy Policy
             </Link>
-            <span className="footer__sep" aria-hidden="true">
-              •
-            </span>
-            <Link href="/terms" className="footer__legal-link">
+
+            <Link href="#" className="footer__legal-link">
               Terms of Service
             </Link>
           </div>

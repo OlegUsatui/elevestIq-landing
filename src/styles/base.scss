@@ -29,7 +29,7 @@ p { margin: 0; }
 .container {
   width: 100%;
   max-width: calc(var(--container-max) + var(--container-pad) * 2);
-  padding-inline: var(--container-pad);
+  padding: var(--container-pad);
   margin-inline: auto;
 }
 

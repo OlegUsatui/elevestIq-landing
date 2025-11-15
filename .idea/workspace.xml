@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f79c9-fbfa-4561-bb38-b5f30cb74f4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/HeroPromo/HeroPromo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/HeroPromo/HeroPromo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/blocks/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blocks/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/blocks/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blocks/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/blocks/_logo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/blocks/_logo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/tokens.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/tokens.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +118,8 @@
       <workItem from="1758294920195" duration="61000" />
       <workItem from="1758294991521" duration="13535000" />
       <workItem from="1760525510934" duration="5470000" />
-      <workItem from="1762594198438" duration="30959000" />
+      <workItem from="1762594198438" duration="32215000" />
+      <workItem from="1763199700434" duration="1758000" />
     </task>
     <servers />
   </component>

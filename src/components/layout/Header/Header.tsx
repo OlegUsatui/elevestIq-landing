@@ -48,7 +48,7 @@ export default function Header() {
         'header--scrolled': scrolled,
       })}
     >
-      <Logo />
+      <Logo theme={'dark'}/>
 
       <div className="header__inner">
         <nav className="header__nav" aria-label="Primary">

@@ -10,15 +10,17 @@ import Footer from '@/components/layout/Footer/Footer';
 
 export default function HomePage() {
   return (
-    <main className="container">
+    <main>
       <Header />
-      <HeroPromo />
-      <AboutUs />
-      <Products />
-      <Pricing />
-      <ElevestAI />
-      <HowItWorks />
-      <GetStarted />
+      <div className="container">
+        <HeroPromo />
+        <AboutUs />
+        <Products />
+        <Pricing />
+        <ElevestAI />
+        <HowItWorks />
+        <GetStarted />
+      </div>
       <Footer />
     </main>
   );
