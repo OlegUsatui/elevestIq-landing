@@ -9,54 +9,56 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   &__card {
     width: 100%;
-    padding: 15px;
     display: flex;
     gap: 10px;
+    padding: 15px;
     border-radius: 15px;
     background: var(--background-gradient);
 
-    .card {
-      &-icon {
-        width: 45px;
-        height: 45px;
-      }
-      &-info {
-        display: flex;
-        flex-direction: column;
+    .card-icon {
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+    }
 
-        &__title {
-          color: var(--white);
-          font-family: Manrope;
-          font-size: 32px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 48px;
-          letter-spacing: -0.64px;
-        }
-        &__text {
-          color: var(--white);
-          font-family: Manrope;
-          font-size: 19px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 40px;
-          letter-spacing: -0.38px;
-        }
+    .card-info {
+      display: flex;
+      flex-direction: column;
+
+      &__title,
+      &__text {
+        color: var(--white);
+        font-family: Manrope;
+        font-style: normal;
+      }
+
+      &__title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: -0.64px;
+      }
+
+      &__text {
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: -0.38px;
       }
     }
   }
-}
-@include tablet {
-  .about-us {
+
+  @include tablet {
     &__cards {
       gap: 18px;
     }
+
     &__card {
       max-width: 345px;
     }
