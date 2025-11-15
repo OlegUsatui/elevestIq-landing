@@ -14,34 +14,15 @@
   gap: var(--btn-gap);
 
   &__btn {
-    width: var(--btn-size);
-    height: var(--btn-size);
-    border-radius: var(--btn-radius);
+    width: 36px;
+    height: 36px;
+    padding: 8px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    background: var(--btn-bg);
-    border: 1px solid var(--btn-border);
-    outline: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: saturate(120%) blur(0.5px);
-    transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.35);
-    }
-
-    &:active {
-      transform: translateY(0);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    &:focus-visible {
-      outline: 2px solid #ffffff;
-      outline-offset: 2px;
-    }
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
   }
 
   &__icon {
@@ -55,18 +36,5 @@
       height: 100%;
       fill: currentColor;
     }
-  }
-}
-
-.social-wrap {
-  background: var(--social-bg, #0b3f8d);
-  padding: 16px;
-  border-radius: 16px;
-}
-
-@include tablet {
-  .social {
-    --btn-size: 44px;
-    --icon-size: 28px;
   }
 }

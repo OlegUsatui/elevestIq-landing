@@ -89,7 +89,7 @@ export default function Header() {
         aria-modal="true"
       >
         <div className="header__panel-inner container">
-          <nav aria-label="Mobile">
+          <nav aria-label="Mobile" className="header__nav">
             <ul className="header__menu">
               {links.map((l) => (
                 <li key={l.href} className="header__item">
