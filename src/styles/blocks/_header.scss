@@ -108,10 +108,8 @@
     }
 
     .header__link {
-      color: #FFF;
+      color: var(--white);
       font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
       line-height: 18px;
     }
   }
@@ -126,20 +124,32 @@
 }
 
 @include tablet {
-  .header__action-icon {
-    &--menu {
-      width: 40px;
-      height: 28px;
-    }
+  .header {
+    padding: 20px 32px;
 
-    &--close {
-      width: 40px;
-      height: 40px;
+    &__action-icon {
+      &--menu {
+        width: 40px;
+        height: 28px;
+      }
+
+      &--close {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
   #mobile-menu {
+    &.header__panel {
+      .header__link {
+        font-size: 20px;
+      }
+    }
 
+    .header__menu {
+      gap: 22px;
+    }
   }
 }
 
