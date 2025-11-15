@@ -1,9 +1,12 @@
+@import '../media.scss';
+
 .about-us {
   padding-block: var(--section-py);
 
   &__cards {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     padding: 0;
@@ -48,5 +51,14 @@
       }
     }
   }
-
+}
+@include tablet {
+  .about-us {
+    &__cards {
+      gap: 18px;
+    }
+    &__card {
+      max-width: 345px;
+    }
+  }
 }

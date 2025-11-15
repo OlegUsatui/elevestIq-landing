@@ -1,3 +1,5 @@
+@import '../media';
+
 .section-title {
   color: var(--dark-blue);
   text-align: center;
@@ -9,4 +11,11 @@
   line-height: 48px;
   letter-spacing: -0.88px;
   margin: 0 0 25px;
+}
+
+@include tablet {
+  .section-title {
+    font-size: 56px;
+    letter-spacing: -1.12px;
+  }
 }

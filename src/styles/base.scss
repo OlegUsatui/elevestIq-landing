@@ -27,6 +27,9 @@ img { display: block; max-width: 100%; }
 p { margin: 0; }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   width: 100%;
   max-width: calc(var(--container-max) + var(--container-pad) * 2);
   padding: var(--container-pad);

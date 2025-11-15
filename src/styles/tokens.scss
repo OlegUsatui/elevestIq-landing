@@ -27,13 +27,13 @@
 
   --container-max: 1200px;
   --container-pad: 20px 10px 60px;
-  --section-py: 48px;
+  --section-py: 25px;
 }
 
 @media (min-width: 768px) {
   :root {
     --container-pad: 32px;
-    --section-py: 80px;
+    --section-py: 0;
     --fs-xl: 1.75rem;
   }
 }
