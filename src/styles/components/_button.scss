@@ -1,6 +1,6 @@
-/* ===== Button (unified) ===== */
+@import '../media';
+
 .btn {
-  /* design tokens (можна перевизначати модифікаторами/контекстом) */
   --btn-bg: var(--background);
   --btn-color: var(--white);
   --btn-border: transparent;
@@ -8,11 +8,9 @@
   --btn-px: 18px;
   --btn-fs: var(--fs-md);
   --btn-radius: var(--radius-md);
-
-  /* фіксовані пресети з існуючого коду */
-  --btn-w: 238px;   /* залишено для сумісності */
-  --btn-h: 56px;    /* залишено для сумісності */
-  --btn-lh: 28px;   /* залишено для сумісності */
+  --btn-w: 238px;
+  --btn-h: 56px;
+  --btn-lh: 28px;
 
   display: inline-flex;
   align-items: center;
@@ -43,68 +41,59 @@
           filter 120ms ease,
           background-color 120ms ease,
           color 120ms ease;
+
+  &:focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.35);
+  }
+
+  &:not(:disabled) {
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:hover {
+      filter: brightness(0.98);
+    }
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
+    filter: none;
+  }
+
+  /* ===== Variants ===== */
+  &--primary {
+    --btn-bg: var(--white);
+    --btn-color: var(--dark-blue);
+    --btn-border: transparent;
+  }
+
+  &--secondary {
+    --btn-bg: var(--blue);
+    --btn-color: var(--white);
+    --btn-border: transparent;
+  }
+
+  &--accent {
+    --btn-bg: var(--dark-blue);
+    --btn-color: var(--white);
+    --btn-border: transparent;
+  }
+
+  &--outline {
+    --btn-bg: var(--white);
+    --btn-color: var(--dark-blue);
+    --btn-border: var(--blue);
+  }
 }
 
-.btn:focus-visible {
-  outline: 2px solid transparent;
-  box-shadow: 0 0 0 3px rgba(19, 129, 237, 0.35);
-}
-
-.btn:not(:disabled):active { transform: translateY(1px); }
-.btn:not(:disabled):hover  { filter: brightness(0.98); }
-
-.btn:disabled,
-.btn.is-disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-  transform: none;
-  filter: none;
-}
-
-/* ===== Variants ===== */
-.btn--primary {
-  /* Залишено як у твоєму другому блоці (біла кнопка) */
-  --btn-bg: var(--white);
-  --btn-color: var(--dark-blue);
-  --btn-border: none;
-}
-
-.btn--secondary {
-  --btn-bg: var(--blue);
-  --btn-color: var(--white);
-  --btn-border: transparent;
-}
-
-.btn--accent {
-  --btn-bg: var(--dark-blue);
-  --btn-color: var(--white);
-  --btn-border: transparent;
-}
-
-.btn--outline {
-  --btn-bg: var(--white);
-  --btn-color: var(--dark-blue);
-  --btn-border: var(--blue);
-}
-
-/* ===== Sizes ===== */
-.btn--md { --btn-py: 12px; --btn-px: 18px; --btn-fs: var(--fs-md); }
-.btn--lg { --btn-py: 16px; --btn-px: 24px; --btn-fs: var(--fs-lg); }
-
-/* ===== Utilities ===== */
-.btn--block { inline-size: 100%; }
-
-/* Квадратна іконка без фіксованих 238×56 */
-.btn--icon {
-  --btn-w: auto;
-  --btn-h: auto;
-  --btn-lh: 1;
-  --btn-px: 12px;
-  aspect-ratio: 1 / 1;
-  gap: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .btn { transition: none; }
+@include tablet {
+  .btn {
+    --btn-fs: 20px;
+  }
 }
