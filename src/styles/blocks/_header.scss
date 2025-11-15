@@ -125,25 +125,24 @@
   }
 }
 
+@include tablet {
+  .header__action-icon {
+    &--menu {
+      width: 40px;
+      height: 28px;
+    }
 
-//@include tablet {
-//  .header__action-icon {
-//    &--menu {
-//      width: 40px;
-//      height: 28px;
-//    }
-//
-//    &--close {
-//      width: 40px;
-//      height: 40px;
-//    }
-//  }
-//
-//  #mobile-menu {
-//
-//  }
-//}
-//
+    &--close {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  #mobile-menu {
+
+  }
+}
+
 //@include desktop {
 //  #mobile-menu.header__panel {
 //    left: 100%;

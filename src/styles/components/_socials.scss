@@ -1,4 +1,4 @@
-@import '../media.scss';
+@import '../media';
 
 .social {
   --social-bg: transparent;
@@ -12,17 +12,19 @@
 
   display: flex;
   gap: var(--btn-gap);
+  background: var(--social-bg);
 
   &__btn {
-    width: 36px;
-    height: 36px;
+    width: var(--btn-size);
+    height: var(--btn-size);
     padding: 8px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: var(--btn-radius);
+    border: 1px solid var(--btn-border);
+    background: var(--btn-bg);
   }
 
   &__icon {
@@ -36,5 +38,12 @@
       height: 100%;
       fill: currentColor;
     }
+  }
+}
+
+@include tablet {
+  .social {
+    --btn-size: 44px;
+    --icon-size: 28px;
   }
 }
