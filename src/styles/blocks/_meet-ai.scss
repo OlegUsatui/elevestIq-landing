@@ -1,3 +1,5 @@
+@import '../media.scss';
+
 .eai {
   --eai-radius: 28px;
   --eai-blue-1: #0b3d91;
@@ -6,21 +8,20 @@
   --eai-bg: linear-gradient(180deg, var(--eai-blue-3) 0%, #0e2d6a 100%);
 
   padding: 24px 10px;
+  color: #fff;
+  font-family: Manrope;
 
   &__wrap {
     position: relative;
     isolation: isolate;
     height: 723px;
-
+    padding: 24px 10px;
     border-radius: var(--eai-radius);
     background: var(--eai-bg);
-    color: #fff;
-    padding: 24px 10px;
     box-shadow: 0 24px 50px rgba(6, 24, 78, 0.3) inset;
     overflow: hidden;
   }
 
-  /* stacked gradient cards behind the content */
   &__stack {
     position: absolute;
     inset: 0;
@@ -56,14 +57,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 0 20px;
     z-index: 2;
-    color: var(--white, #FFF);
-    font-family: Manrope;
+    color: var(--white, #fff);
     font-size: 40px;
-    font-style: normal;
     font-weight: 700;
     line-height: 70px;
-    margin: 0 0 20px;
   }
 
   /* front white panel (main card) */
@@ -71,72 +70,69 @@
     position: absolute;
     top: 60%;
     left: 50%;
+    inline-size: 80%;
     transform: translate(-50%, -50%);
-    width: 80%;
     z-index: 2;
+    padding: 18px 14px 22px;
+    border-radius: 22px;
     background: #fff;
     color: var(--eai-blue-1);
-    border-radius: 22px;
-    padding: 18px 14px 22px;
     box-shadow:
             0 14px 25px rgba(10, 24, 80, 0.28),
-            0 1px 0 rgba(255,255,255,0.9) inset;
+            0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  }
 
-    //&--front {
-    //  animation: eai-rise 700ms cubic-bezier(.2,.9,.2,1) both;
-    //}
+  &__lead,
+  &__text {
+    font-style: normal;
+    letter-spacing: -0.3px;
   }
 
   &__lead {
-    color: var(--dark-blue, #0B3D91);
-    font-family: Manrope;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px; /* 152.941% */
-    letter-spacing: -0.34px;
     margin-bottom: 20px;
+    color: var(--dark-blue, #0b3d91);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.34px;
   }
 
   &__list {
-    padding: 0;
-    list-style: none;
     display: grid;
     gap: 10px;
     margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
   }
 
   &__item {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
   }
 
   &__tick {
-    min-width: 22px;
-    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 22px;
+    height: 22px;
     border-radius: 999px;
     background: #1f6fe3;
     color: #fff;
 
     svg {
+      display: block;
       width: 14px;
       height: 14px;
-      display: block;
     }
   }
 
   &__text {
-    color: var(--dark-blue, #0B3D91);
-    font-family: Manrope;
+    color: var(--dark-blue, #0b3d91);
     font-size: 13px;
-    font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 160% */
-    letter-spacing: -0.3px;
+    line-height: 24px;
   }
 
   &__logo {
@@ -148,19 +144,106 @@
 
 /* animations */
 @keyframes eai-rise {
-  from { transform: translateY(12px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes eai-float-back {
-  0%,100% { transform: translateY(12%) rotate(-4deg); }
-  50%     { transform: translateY(8%)  rotate(-5deg); }
+  0%,
+  100% {
+    transform: translateY(12%) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(8%) rotate(-5deg);
+  }
 }
 
 @keyframes eai-float-mid {
-  0%,100% { transform: translateY(6%) rotate(-2deg); }
-  50%     { transform: translateY(3%) rotate(-1deg); }
+  0%,
+  100% {
+    transform: translateY(6%) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(3%) rotate(-1deg);
+  }
 }
 
+@include tablet {
+  .eai {
+    --eai-radius: 30px;
 
+    &__wrap {
+      height: 689px;
+      padding: 63px 41px;
+    }
 
+    &__card {
+      inline-size: 90%;
+      block-size: 65%;
+      border-radius: 30px;
+
+      &--mid {
+        inline-size: 80%;
+        block-size: 65%;
+      }
+
+      &--back {
+        inline-size: 80%;
+        block-size: 65%;
+      }
+    }
+
+    &__title {
+      justify-content: flex-start;
+      font-size: 60px;
+      margin: 0 0 20px;
+    }
+
+    &__panel {
+      inline-size: 90%;
+      border-radius: 30px;
+      padding: 35px 22px 42px;
+    }
+
+    &__lead {
+      margin-bottom: 31px;
+      font-size: 32px;
+      line-height: 30px;
+      letter-spacing: -0.64px;
+    }
+
+    &__list {
+      gap: 16px;
+      margin: 0;
+    }
+
+    &__item {
+      gap: 16px;
+    }
+
+    &__tick {
+      min-width: 24px;
+      height: 24px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      letter-spacing: -0.32px;
+    }
+
+    &__logo {
+      display: none;
+    }
+  }
+}
