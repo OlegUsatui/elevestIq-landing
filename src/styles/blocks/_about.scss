@@ -34,7 +34,6 @@
       &__title,
       &__text {
         color: var(--white);
-        font-family: Manrope;
         font-style: normal;
       }
 
@@ -53,8 +52,9 @@
       }
     }
   }
-
-  @include tablet {
+}
+@include tablet {
+  .about-us {
     &__cards {
       gap: 18px;
     }

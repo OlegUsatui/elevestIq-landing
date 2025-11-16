@@ -94,6 +94,8 @@
 
 @include tablet {
   .btn {
-    --btn-fs: 20px;
+    --btn-fs: 28px;
+    --btn-w: 280px;
+    --btn-h: 70px;
   }
 }
