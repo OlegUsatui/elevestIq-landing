@@ -3,14 +3,6 @@
   text-align: center;
   color: var(--white);
 
-  &__subtitle {
-    margin: 8px auto 20px;
-    max-width: 680px;
-    opacity: 0.85;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
   &__cards {
     display: grid;
     gap: 16px;
@@ -39,7 +31,7 @@
     padding: 30px 0;
   }
 
-  &__title {
+  &__card-title {
     color: #FFF;
     text-align: center;
     font-family: Manrope;
@@ -52,7 +44,7 @@
   }
 
   /* body */
-  &__body {
+  &__card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,18 +108,60 @@
   }
 }
 
-///* breakpoints */
-//@media (min-width: 768px) {
-//  .pricing {
-//    padding: 56px 20px;
-//
-//    &__cards {
-//      grid-template-columns: repeat(2, 1fr);
-//      gap: 20px;
-//    }
-//  }
-//}
-//
+/* breakpoints */
+@media (min-width: 768px) {
+  .pricing {
+
+    &__cards {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 540px;
+    }
+
+    &__head {
+      padding: 36px 0;
+    }
+
+    &__card-body {
+      flex: 1;
+      padding: 22px 10px 25px;
+    }
+
+    &__price {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    &__features {
+      padding: 0 0 0 20px;
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+
+    &__feature {
+      font-size: 15px;
+    }
+
+    &__note {
+      font-size: 15px;
+      line-height: 26px;
+      margin-bottom: auto;
+      padding-left: 24px;
+
+      &-label {
+        font-size: 15px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
 //@media (min-width: 1200px) {
 //  .pricing {
 //    padding: 72px 0;

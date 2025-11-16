@@ -82,10 +82,10 @@ export default function Pricing({
             <div
               className={clsx('pricing__head', t.id === 'pro' ? 'pro' : null)}
             >
-              <h3 className="pricing__title">{t.name}</h3>
+              <h3 className="pricing__card-title">{t.name}</h3>
             </div>
 
-            <div className="pricing__body">
+            <div className="pricing__card-body">
               <div
                 className="pricing__price"
                 aria-label={`$${t.price} per ${t.per}`}
