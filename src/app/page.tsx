@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <main>
       <Header />
-      <div className="container">
+      <div className="main-container inner-wrapper">
         <HeroPromo />
         <AboutUs />
         <Products />

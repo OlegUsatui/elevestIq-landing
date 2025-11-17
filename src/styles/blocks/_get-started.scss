@@ -1,3 +1,5 @@
+@import '../media.scss';
+
 .start {
   --start-bg-1: #1f3fa4;
   --start-bg-2: #1a3a8d;
@@ -134,4 +136,39 @@
   }
 }
 
+@include tablet {
+  .start {
+    &__card {
+      padding: 30px 52px 25px;
+    }
 
+    &__title {
+
+      font-size: 60px;
+      margin: 0 0 20px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    &__input {
+      height: 64px;
+      font-size: 20px;
+    }
+
+    &__option {
+      font-size: 32px;
+    }
+
+    &__submit {
+      margin-bottom: 20px;
+    }
+
+    &__hint {
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+}

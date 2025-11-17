@@ -34,51 +34,53 @@ export default function Footer({
 
   return (
     <footer className="footer">
-      <div className="footer__container">
-        <div className="footer__logo">
-          <Logo theme={'light'} />
-        </div>
-        <div className="footer__top">
-          <div className="footer__brand">
-            <dl className="footer__info">
-              <div className="footer__row">
-                <dt className="footer__dt">Phone number:</dt>
-                <dd className="footer__dd">{phone}</dd>
-              </div>
-              <div className="footer__row">
-                <dt className="footer__dt">Address:</dt>
-                <dd className="footer__dd">{address}</dd>
-              </div>
-            </dl>
+      <div className="main-container">
+        <div className="footer__container">
+          <div className="footer__logo">
+            <Logo theme={'light'} />
+          </div>
+          <div className="footer__top">
+            <div className="footer__brand">
+              <dl className="footer__info">
+                <div className="footer__row">
+                  <dt className="footer__dt">Phone number:</dt>
+                  <dd className="footer__dd">{phone}</dd>
+                </div>
+                <div className="footer__row">
+                  <dt className="footer__dt">Address:</dt>
+                  <dd className="footer__dd">{address}</dd>
+                </div>
+              </dl>
 
-            <Socials></Socials>
+              <Socials></Socials>
+            </div>
+
+            <nav className="footer__nav" aria-label="Footer">
+              <ul className="footer__nav-list">
+                {nav.map((item) => (
+                  <li key={item.label} className="footer__nav-item">
+                    <Link href={item.href} className="footer__nav-link">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
-          <nav className="footer__nav" aria-label="Footer">
-            <ul className="footer__nav-list">
-              {nav.map((item) => (
-                <li key={item.label} className="footer__nav-item">
-                  <Link href={item.href} className="footer__nav-link">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+          <div className="footer__bottom">
+            <div className="footer__copy">
+              ©{year} ElevestIQ. All rights reserved.
+            </div>
+            <div className="footer__legal">
+              <Link href="#" className="footer__legal-link">
+                Privacy Policy
+              </Link>
 
-        <div className="footer__bottom">
-          <div className="footer__copy">
-            ©{year} ElevestIQ. All rights reserved.
-          </div>
-          <div className="footer__legal">
-            <Link href="#" className="footer__legal-link">
-              Privacy Policy
-            </Link>
-
-            <Link href="#" className="footer__legal-link">
-              Terms of Service
-            </Link>
+              <Link href="#" className="footer__legal-link">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>

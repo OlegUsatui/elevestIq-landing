@@ -42,66 +42,68 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={clsx('header', {
-        'header--open': open,
-        'header--scrolled': scrolled,
-      })}
-    >
-      <Logo theme={'dark'}/>
+    <header>
+      <div className="main-container">
+        <div className={clsx('header', {
+          'header--open': open,
+          'header--scrolled': scrolled,
+        })}>
+          <Logo theme={'dark'}/>
 
-      <div className="header__inner">
-        <nav className="header__nav" aria-label="Primary">
-          <ul className="header__menu">
-            {links.map((l) => (
-              <li key={l.href} className="header__item">
-                <a className="header__link" href={l.href}>
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+          <div className="header__inner">
+            <nav className="header__nav" aria-label="Primary">
+              <ul className="header__menu">
+                {links.map((l) => (
+                  <li key={l.href} className="header__item">
+                    <a className="header__link" href={l.href}>
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-        <div className="header__actions">
-          <button className="header__actions-button">Start Free</button>
-        </div>
+            <div className="header__actions">
+              <button className="header__actions-button">Start Free</button>
+            </div>
 
-        <button
-          type="button"
-          className="header__toggle"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-controls="mobile-menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <Icon
-            name={open ? 'close' : 'menu'}
-            className={`header__action-icon ${open ? 'header__action-icon--close' : 'header__action-icon--menu'}`}
-          />
-        </button>
-      </div>
+            <button
+              type="button"
+              className="header__toggle"
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-controls="mobile-menu"
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+            >
+              <Icon
+                name={open ? 'close' : 'menu'}
+                className={`header__action-icon ${open ? 'header__action-icon--close' : 'header__action-icon--menu'}`}
+              />
+            </button>
+          </div>
 
-      <div
-        id="mobile-menu"
-        className="header__panel"
-        role="dialog"
-        aria-modal="true"
-      >
-        <div className="header__panel-inner container">
-          <nav aria-label="Mobile" className="header__nav">
-            <ul className="header__menu">
-              {links.map((l) => (
-                <li key={l.href} className="header__item">
-                  <a className="header__link" href={l.href} onClick={closeMenu}>
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="header__socials">
-            <Socials></Socials>
+          <div
+            id="mobile-menu"
+            className="header__panel"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div className="header__panel-inner container">
+              <nav aria-label="Mobile" className="header__nav">
+                <ul className="header__menu">
+                  {links.map((l) => (
+                    <li key={l.href} className="header__item">
+                      <a className="header__link" href={l.href} onClick={closeMenu}>
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <div className="header__socials">
+                <Socials></Socials>
+              </div>
+            </div>
           </div>
         </div>
       </div>

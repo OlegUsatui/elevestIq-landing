@@ -1,3 +1,5 @@
+@import './media.scss';
+
 *,
 *::before,
 *::after {
@@ -22,24 +24,62 @@ button {
   font-family: var(--font-sans);
 }
 
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-p { margin: 0; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  width: 100%;
-  max-width: calc(var(--container-max) + var(--container-pad) * 2);
-  padding: var(--container-pad);
-  margin-inline: auto;
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
 }
 
 .visually-hidden {
   position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0 0 0 0);
-  white-space: nowrap; border: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (min-width: $bp-tablet) {
+  .main-container {
+    max-width: $bp-tablet;
+    padding-inline: 32px;
+  }
+  .inner-wrapper {
+    gap: 66px;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .main-container {
+    max-width: $bp-desktop;
+    padding-inline: 62px;
+  }
+
+  .inner-wrapper {
+    gap: 94px;
+  }
 }
